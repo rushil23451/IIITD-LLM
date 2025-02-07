@@ -22,7 +22,7 @@ if not os.path.exists(app.config['UPLOAD_FOLDER']):
 
 # Initialize the models globally
 sentence_bert_model = SentenceTransformer('sentence-transformers/paraphrase-MiniLM-L6-v2')
-os.environ["GROQ_API_KEY"] = "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"
+
 
 
 def get_db():
