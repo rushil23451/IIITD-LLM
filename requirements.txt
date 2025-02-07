@@ -1,7 +1,6 @@
 Flask==3.0.3
 sentence-transformers==2.7.0
 gradio-client==1.2.0
-SQLite3
 gTTS==2.5.1
 groq==0.15.0
 transformers==4.41.2
