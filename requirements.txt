@@ -13,3 +13,4 @@ SpeechRecognition==3.10.4
 scikit-learn==1.4.2
 pydub==0.25.1
 google-cloud-texttospeech==2.17.2
+gunicorn==20.1.0
