@@ -14,8 +14,8 @@ from groq import Groq
 
 import torch
 
-app = Flask(__name__, static_url_path='/uploads', static_folder='uploads')
-app.config['UPLOAD_FOLDER'] = 'uploads'
+app = Flask(__name__, static_url_path='/uploads', static_folder='/tmp/uploads')
+app.config['UPLOAD_FOLDER'] = '/tmp/uploads'
 
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
