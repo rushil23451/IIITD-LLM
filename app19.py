@@ -13,6 +13,7 @@ from datetime import datetime
 from groq import Groq
 
 import torch
+import shutil
 
 app = Flask(__name__, static_url_path='/uploads', static_folder='/tmp/uploads')
 app.config['UPLOAD_FOLDER'] = '/tmp/uploads'
@@ -25,8 +26,13 @@ sentence_bert_model = SentenceTransformer('sentence-transformers/paraphrase-Mini
 
 
 
+
+
+if not os.path.exists('/tmp/final.sqlite'):
+    shutil.copyfile('final.sqlite', '/tmp/final.sqlite')
+
 def get_db():
-    return sqlite3.connect('final.sqlite')
+    return sqlite3.connect('/tmp/final.sqlite')
 
 def get_all_questions(db):
     cursor = db.cursor()
